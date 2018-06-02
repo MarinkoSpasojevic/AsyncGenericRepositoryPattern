@@ -15,10 +15,10 @@ namespace Contracts
         OwnerExtended GetOwnerWithDetails(Guid ownerId);
         Task<OwnerExtended> GetOwnerWithDetailsAsync(Guid ownerId);
         void CreateOwner(Owner owner);
-        Task<int> CreateOwnerAsync(Owner owner);
+        Task CreateOwnerAsync(Owner owner);
         void UpdateOwner(Owner dbOwner, Owner owner);
-        Task<int> UpdateOwnerAsync(Owner dbOwner, Owner owner);
+        Task UpdateOwnerAsync(Owner dbOwner, Owner owner);
         void DeleteOwner(Owner owner);
-        Task<int> DeleteOwnerAsync(Owner owner);
+        Task DeleteOwnerAsync(Owner owner);
     }
 }

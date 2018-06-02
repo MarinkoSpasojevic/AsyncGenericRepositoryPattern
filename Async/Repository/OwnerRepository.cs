@@ -72,11 +72,11 @@ namespace Repository
             Save();
         }
 
-        public async Task<int> CreateOwnerAsync(Owner owner)
+        public async Task CreateOwnerAsync(Owner owner)
         {
             owner.Id = Guid.NewGuid();
             Create(owner);
-            return await SaveAsync();
+            await SaveAsync();
         }
 
         public void UpdateOwner(Owner dbOwner, Owner owner)
@@ -86,11 +86,11 @@ namespace Repository
             Save();
         }
 
-        public async Task<int> UpdateOwnerAsync(Owner dbOwner, Owner owner)
+        public async Task UpdateOwnerAsync(Owner dbOwner, Owner owner)
         {
             dbOwner.Map(owner);
             Update(dbOwner);
-            return await SaveAsync();
+            await SaveAsync();
         }
 
         public void DeleteOwner(Owner owner)
@@ -99,10 +99,10 @@ namespace Repository
             Save();
         }
 
-        public async Task<int> DeleteOwnerAsync(Owner owner)
+        public async Task DeleteOwnerAsync(Owner owner)
         {
             Delete(owner);
-            return await SaveAsync();
+            await SaveAsync();
         }
     }
 }
